@@ -1,0 +1,69 @@
+
+#soruAlani,button,#paraOdulListesi{
+    margin-left:100px;
+    margin-right:100px; 
+    border:1px solid black;
+}
+body{
+    background-color: #898AA6;
+}
+
+#paraOdulListesi{
+    text-decoration:none;
+}
+
+#paraOdulListesi{
+padding-left: 30px;
+    font-size: 30px;
+    padding: 15px;
+    color: yellow;
+    background-color: #495C83;
+    border: 10px solid #FF5B00;
+     
+    
+  
+}
+#yarışma1{
+    color: white;
+}
+#yarışma2{
+    color: white;
+}#yarışma3{
+    color: white;
+}
+#odul{
+   width: 200px;
+    border: 7px solid aqua
+}
+#paraOdulListesi{
+    width: 400px;
+}
+#paraOdulListesi{
+    margin-right: auto;
+    margin-left: auto;
+}
+#odul{
+    margin-right: auto;
+    margin-left: auto;
+}
+#soruAlani{
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#buttonA{
+    margin-bottom: 5px;
+    margin-right: auto;
+    padding: 10px;
+}#buttonB{
+    margin-right: auto;
+    padding: 10px;
+}#buttonC{
+    margin-right: auto;
+    padding: 10px;
+}#buttonD{
+    margin-right: auto;
+    padding: 10px;
+}
+
+
