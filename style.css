@@ -8,62 +8,55 @@ body{
     background-color: #898AA6;
 }
 
-#paraOdulListesi{
-    text-decoration:none;
-}
 
 #paraOdulListesi{
-padding-left: 30px;
-    font-size: 30px;
-    padding: 15px;
-    color: yellow;
-    background-color: #495C83;
-    border: 10px solid #FF5B00;
-     
-    
-  
-}
-#yarışma1{
-    color: white;
-}
-#yarışma2{
-    color: white;
-}#yarışma3{
-    color: white;
-}
-#odul{
-   width: 200px;
-    border: 7px solid aqua
-}
-#paraOdulListesi{
+    background-color: #1C3879;
+    border: 1px solid #E8AA42;
+    color: #FFC23C;
+    font-size: 30px;     
+    list-style-type: none;
+    margin-top:25px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 80px;
     width: 400px;
 }
-#paraOdulListesi{
-    margin-right: auto;
-    margin-left: auto;
-}
+
+
 #odul{
+    margin-top:150px;
+    padding:20px;
     margin-right: auto;
     margin-left: auto;
+    width: 200px;
+    border: 7px solid aqua;
+    color:white;
 }
 #soruAlani{
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-right: auto;
-}
-#buttonA{
-    margin-bottom: 5px;
-    margin-right: auto;
-    padding: 10px;
-}#buttonB{
-    margin-right: auto;
-    padding: 10px;
-}#buttonC{
-    margin-right: auto;
-    padding: 10px;
-}#buttonD{
-    margin-right: auto;
-    padding: 10px;
+    margin-top:25px;
+    width:700px;
+    padding:10px;
+    color:white;
+    background:#1C3879;
 }
 
 
+.btn{
+    margin-right: auto;
+    margin-bottom:5px;
+    padding: 10px;
+}
+
+.btn-text{
+    color:white;
+    background:#1C3879;
+}
+
+
+.btn:hover{
+color:#E8AA42
+}
+
+.text-white:{
+    color:text
+}
