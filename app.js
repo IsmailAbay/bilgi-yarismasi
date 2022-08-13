@@ -24,11 +24,6 @@ function soruVeSecenekleriTemizle() {
     buttonB.innerHTML += "<b>B: </b>"
     buttonC.innerHTML += "<b>C: </b>"
     buttonD.innerHTML += "<b>D: </b>"
-    buttonA.style.color = "black"
-    buttonB.style.color = "black"
-    buttonC.style.color = "black"
-    buttonD.style.color = "black"
-
 }
 
 function soruVeSecenekleriEkranaBas() {
@@ -70,31 +65,25 @@ function DSecenegiTiklandi() {
 
 function cevabiKontrolEt(verilenCevap, element) {
     const dogruCevap = soruListesi[suAnkiSoruSirasi].dogruCevap
-    console.log(element)
-    if (verilenCevap === dogruCevap) {
-        element.style.color = "yellowgreen"
-        suAnkiSoruSirasi++
-        soruVeSecenekleriTemizle()
-        soruVeSecenekleriEkranaBas()
-        sureyiBaslat()
-        paraOdulListesi.lastElementChild.style.color = "yellow"
-    }
-    else {
-        console.log(suAnkiSoruSirasi)
-        element.style.color = "red"
-        odul.style.display='block'
+    element.style.color = "#E8AA42"
+    setTimeout(() => {
+        if (verilenCevap === dogruCevap) {
+            element.style.color = "yellowgreen"
+            suAnkiSoruSirasi++
+            soruVeSecenekleriTemizle()
+            soruVeSecenekleriEkranaBas()
+            sureyiBaslat()
+            paraOdulListesi.lastElementChild.style.color = "yellow"
+        }
+        else {
+            element.style.color = "red"
+            odul.style.display = 'block'
 
-        if(suAnkiSoruSirasi==0){
-            odul.textContent=" kazancınız 0 TL"
+            if (suAnkiSoruSirasi == 0) {
+                odul.textContent = " Kazanılan Ödul: 0 TL"
 
-        }else
-        odul.textContent= soruListesi[suAnkiSoruSirasi - 1  ].kazanc
-
-
-
-    }
-    
-    
-
-
+            } else
+                odul.textContent = soruListesi[suAnkiSoruSirasi - 1].kazanc
+        }
+    }, 1000);
 }
