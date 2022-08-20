@@ -45,6 +45,7 @@ body{
     margin-right: auto;
     margin-bottom:5px;
     padding: 10px;
+    width:200px;
 }
 
 .btn-text{
@@ -59,4 +60,8 @@ color:#E8AA42
 
 .text-white:{
     color:text
+}
+
+.active{
+    background:#05668D;
 }

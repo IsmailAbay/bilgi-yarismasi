@@ -14,42 +14,52 @@
 
 <body>
     <div class="row">
+        <!-- Soru Alanı -->
         <div class="col-6">
             <span id="sure"></span>
             <p id="soruAlani">Soru gelicek</p>
-            <button class="btn btn-text" onclick="ASecenegiTiklandi()" id="buttonA"><b>A: </b></button>
-            <button class="btn btn-text" onclick="BSecenegiTiklandi()" id="buttonB"><b>B: </b></button>
-            <br>
-            <button class="btn btn-text" onclick="CSecenegiTiklandi()" id="buttonC"><b>C: </b></button>
-            <button class="btn btn-text" onclick="DSecenegiTiklandi()" id="buttonD"><b>D: </b></button>
 
+            <div class="row">
+                <!-- A ve C şıkları -->
+                <div class="col-6">
+                    <button class="btn btn-text" onclick="ASecenegiTiklandi()" id="buttonA"><b>A: </b></button>
+                    <button class="btn btn-text" onclick="CSecenegiTiklandi()" id="buttonC"><b>C: </b></button>
+                </div>
+                <!-- B ve D şıkları -->
+                <div class="col-6">
+                    <button class="btn btn-text" onclick="BSecenegiTiklandi()" id="buttonB"><b>B: </b></button>
+                    <button class="btn btn-text" onclick="DSecenegiTiklandi()" id="buttonD"><b>D: </b></button>
+                </div>
+            </div>
             <p id="odul" style="display:none"></p>
         </div>
+        <!-- Ödül Tablosu-->
         <div class="col-6">
+
             <ul id="paraOdulListesi">
-                <li class="text-white" id="baraj3">12 - 1.000.000TL</li>
-                <li>11 - 250.000TL</li>
-                <li>10 - 125.000TL</li>
-                <li>9 - 60.000TL</li>
-                <li>8 - 30.000TL</li>
-                <li class="text-white" id="baraj2">7 - 15.000TL</li>
-                <li>6 - 7.500TL</li>
-                <li>5 - 5.000TL</li>
-                <li>4 - 3.000TL</li>
-                <li>3 - 2.000TL</li>
-                <li class="text-white" id="baraj1">2 - 1.000TL</li>
-                <li>1 - 500TL</li>
+                <li data-id="12" class="text-white" id="baraj3">12 - 1.000.000TL</li>
+                <li data-id="11">11 - 250.000TL</li>
+                <li data-id="10">10 - 125.000TL</li>
+                <li data-id="9">9 - 60.000TL</li>
+                <li data-id="8">8 - 30.000TL</li>
+                <li data-id="7" class="text-white" id="baraj2">7 - 15.000TL</li>
+                <li data-id="6">6 - 7.500TL</li>
+                <li data-id="5">5 - 5.000TL</li>
+                <li data-id="4">4 - 3.000TL</li>
+                <li data-id="3">3 - 2.000TL</li>
+                <li data-id="2" class="text-white" id="baraj1">2 - 1.000TL</li>
+                <li data-id="1" class="active">1 - 500TL</li>
             </ul>
+                <img src="/assets/jokerler/yuzde50.png" alt="" width="50" type="button" onclick="yuzdeElliJokerHakkiniKullan()"/>
         </div>
-    </div>
 
-    <audio controls autoplay hidden>
-        <source src="/assets/music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+        <!-- <audio controls autoplay hidden>
+            <source src="/assets/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio> -->
 
-    <script src="/sorular.js"></script>
-    <script src="/app.js"></script>
+        <script src="/sorular.js"></script>
+        <script src="/app.js"></script>
 
 </body>
 
