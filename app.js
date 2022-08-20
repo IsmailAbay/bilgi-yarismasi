@@ -9,8 +9,6 @@ let odul = document.querySelector('#odul')
 
 let suAnkiSoruSirasi = 0
 
-// paraOdulListesi.lastElementChild.style.color = "blue"
-
 soruVeSecenekleriEkranaBas()
 
 // sureyiBaslat()
@@ -24,6 +22,10 @@ function soruVeSecenekleriTemizle() {
     buttonB.innerHTML += "<b>B: </b>"
     buttonC.innerHTML += "<b>C: </b>"
     buttonD.innerHTML += "<b>D: </b>"
+    buttonA.style.color = "white";
+    buttonB.style.color = "white";
+    buttonC.style.color = "white";
+    buttonD.style.color = "white";
 }
 
 function soruVeSecenekleriEkranaBas() {
@@ -32,6 +34,12 @@ function soruVeSecenekleriEkranaBas() {
     buttonB.innerHTML += `${soruListesi[suAnkiSoruSirasi].b}`
     buttonC.innerHTML += `${soruListesi[suAnkiSoruSirasi].c}`
     buttonD.innerHTML += `${soruListesi[suAnkiSoruSirasi].d}`
+    const listItem = document.querySelector(`[data-id="${suAnkiSoruSirasi + 1}"]`)
+    listItem.classList.add("active")
+
+    const onceki = document.querySelector(`[data-id="${suAnkiSoruSirasi}"]`)
+    onceki.classList.remove("active")
+
 }
 
 function sureyiBaslat() {
@@ -63,27 +71,93 @@ function DSecenegiTiklandi() {
     cevabiKontrolEt(yanitD, buttonD)
 }
 
-function cevabiKontrolEt(verilenCevap, element) {
+function cevabiKontrolEt(verilenCevap, button) {
     const dogruCevap = soruListesi[suAnkiSoruSirasi].dogruCevap
-    element.style.color = "#E8AA42"
+    button.style.color = "#E8AA42"
     setTimeout(() => {
+
+        //Doğru cevap verildiği takdirde
         if (verilenCevap === dogruCevap) {
-            element.style.color = "yellowgreen"
+            button.style.color = "yellowgreen"
             suAnkiSoruSirasi++
-            soruVeSecenekleriTemizle()
-            soruVeSecenekleriEkranaBas()
-            sureyiBaslat()
-            paraOdulListesi.lastElementChild.style.color = "yellow"
+            setTimeout(() => {
+                soruVeSecenekleriTemizle()
+                soruVeSecenekleriEkranaBas()
+                sureyiBaslat()
+            }, 1000);
         }
+
+        //Yanlış cevap verildiği takdirde
         else {
-            element.style.color = "red"
+            button.style.color = "red"
             odul.style.display = 'block'
 
-            if (suAnkiSoruSirasi == 0) {
+            // 1 ve ya 2.sorularda yanlış yapılması durumunda
+            if (suAnkiSoruSirasi == 0 || suAnkiSoruSirasi == 1) {
                 odul.textContent = " Kazanılan Ödul: 0 TL"
+            }
 
-            } else
+            // 3,4,5,6 veya 7.sorularda yanlış yapılması durumunda
+            else if (suAnkiSoruSirasi == 2 || suAnkiSoruSirasi == 3 || suAnkiSoruSirasi == 4 || suAnkiSoruSirasi == 5 || suAnkiSoruSirasi == 6) {
+                odul.textContent = " Kazanılan Ödul: 1000 TL"
+            }
+
+            // 8,9,10,11 veya 12.sorularda yanlış yapılması durumunda
+            else if (suAnkiSoruSirasi == 7 || suAnkiSoruSirasi == 8 || suAnkiSoruSirasi == 9 || suAnkiSoruSirasi == 10 || suAnkiSoruSirasi == 11) {
+                odul.textContent = " Kazanılan Ödul: 15000 TL"
+            }
+            else
                 odul.textContent = soruListesi[suAnkiSoruSirasi - 1].kazanc
         }
     }, 1000);
 }
+
+function yuzdeElliJokerHakkiniKullan() {
+    const a = soruListesi[suAnkiSoruSirasi].a
+    const b = soruListesi[suAnkiSoruSirasi].b
+    const c = soruListesi[suAnkiSoruSirasi].c
+    const d = soruListesi[suAnkiSoruSirasi].d
+    const dogruCevap = soruListesi[suAnkiSoruSirasi].dogruCevap
+
+    let dictionary = [
+        {
+            yanit: a,
+            sira: 1
+        },
+        {
+            yanit: b,
+            sira: 2
+        },
+        {
+            yanit: c,
+            sira: 3
+        },
+        {
+            yanit: d,
+            sira: 4
+        }
+    ]
+
+
+    let yanlisCevapSiralari=[]
+    for (let item of dictionary) {
+        if (item.yanit != dogruCevap) {
+            yanlisCevapSiralari.push(item.sira)
+            console.log(yanlisCevapSiralari)
+            // buttonA.textContent = ""
+            // buttonA.style.height = "45px"
+        }
+    }
+    const random = Math.floor(Math.random() * yanlisCevapSiralari.length);
+    yanlisCevapSiralari.splice(random,1)
+    
+
+    for(let yanlis of yanlisCevapSiralari){
+        if(dictionary.concat(x=>x.sira==yanlis)){
+          
+        }
+    }
+}
+
+
+console.log(random, months[random]);

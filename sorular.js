@@ -123,17 +123,18 @@ const soruListesi = [
         dogruCevap: "Ahmet Hamdi Tanpınar",
         kazanc:"TEBRİKLER KİM MİLYONER OLMAK İSTEMEZDEN: ('250.000TL') KAZANDINIZ"
 
-    }, {
-        soruSiralamasi: 12,
-        soru:  "Bir insanın vücudunu oluşturan elementlerden kütlece ikinci sırada yer alanın oranı yüzde 18'ken yüzde 65'le birinci sırada yer alan element hangisidir?",
-        a: "Azot",
-        b: " Hidrojen",
-        c: "Karbon ",
-        d: "Oksijen",
-        dogruCevap: "Oksijen",
-        kazanc:"TEBRİKLER KİM MİLYONER OLMAK İSTEMEZDEN: ('1.000.000TL') KAZANDINIZ"
+    // }, {
+    //     soruSiralamasi: 12,
+    //     soru:  "Bir insanın vücudunu oluşturan elementlerden kütlece ikinci sırada yer alanın oranı yüzde 18'ken yüzde 65'le birinci sırada yer alan element hangisidir?",
+    //     a: "Azot",
+    //     b: " Hidrojen",
+    //     c: "Karbon ",
+    //     d: "Oksijen",
+    //     dogruCevap: "Oksijen",
+    //     kazanc:"TEBRİKLER KİM MİLYONER OLMAK İSTEMEZDEN: ('1.000.000TL') KAZANDINIZ"
         
-    },
+    // },
+    }
 ]
 // console.log(soruListesi[1].kazanc)
 
